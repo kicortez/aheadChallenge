@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		05BF531A2CB54B2900A844FD /* aheadChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53192CB54B2900A844FD /* aheadChallengeApp.swift */; };
-		05BF531C2CB54B2900A844FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF531B2CB54B2900A844FD /* ContentView.swift */; };
 		05BF531E2CB54B2A00A844FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05BF531D2CB54B2A00A844FD /* Assets.xcassets */; };
 		05BF53212CB54B2A00A844FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05BF53202CB54B2A00A844FD /* Preview Assets.xcassets */; };
 		05BF532B2CB54B2A00A844FD /* aheadChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF532A2CB54B2A00A844FD /* aheadChallengeTests.swift */; };
 		05BF53352CB54B2A00A844FD /* aheadChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53342CB54B2A00A844FD /* aheadChallengeUITests.swift */; };
 		05BF53372CB54B2A00A844FD /* aheadChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53362CB54B2A00A844FD /* aheadChallengeUITestsLaunchTests.swift */; };
+		05BF53442CB54B5A00A844FD /* ActivityContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53432CB54B5A00A844FD /* ActivityContainerView.swift */; };
+		05BF53472CB54BB100A844FD /* activity-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 05BF53462CB54BB100A844FD /* activity-response.json */; };
+		05BF53492CB54BCC00A844FD /* ActivityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53482CB54BCC00A844FD /* ActivityResponse.swift */; };
+		05BF534B2CB5566700A844FD /* RecapActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF534A2CB5566700A844FD /* RecapActivity.swift */; };
+		05BF534D2CB5569200A844FD /* MultipleChoiceActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF534C2CB5569200A844FD /* MultipleChoiceActivity.swift */; };
+		05BF534F2CB556C300A844FD /* ActivityScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF534E2CB556C300A844FD /* ActivityScreen.swift */; };
+		05BF53512CB5573D00A844FD /* ActivityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53502CB5573D00A844FD /* ActivityOption.swift */; };
+		05BF53532CB5577E00A844FD /* activity-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 05BF53462CB54BB100A844FD /* activity-response.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,6 @@
 /* Begin PBXFileReference section */
 		05BF53162CB54B2900A844FD /* aheadChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aheadChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BF53192CB54B2900A844FD /* aheadChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aheadChallengeApp.swift; sourceTree = "<group>"; };
-		05BF531B2CB54B2900A844FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05BF531D2CB54B2A00A844FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05BF53202CB54B2A00A844FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05BF53262CB54B2A00A844FD /* aheadChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aheadChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +50,13 @@
 		05BF53302CB54B2A00A844FD /* aheadChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aheadChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BF53342CB54B2A00A844FD /* aheadChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aheadChallengeUITests.swift; sourceTree = "<group>"; };
 		05BF53362CB54B2A00A844FD /* aheadChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aheadChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		05BF53432CB54B5A00A844FD /* ActivityContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityContainerView.swift; sourceTree = "<group>"; };
+		05BF53462CB54BB100A844FD /* activity-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "activity-response.json"; sourceTree = "<group>"; };
+		05BF53482CB54BCC00A844FD /* ActivityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityResponse.swift; sourceTree = "<group>"; };
+		05BF534A2CB5566700A844FD /* RecapActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapActivity.swift; sourceTree = "<group>"; };
+		05BF534C2CB5569200A844FD /* MultipleChoiceActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceActivity.swift; sourceTree = "<group>"; };
+		05BF534E2CB556C300A844FD /* ActivityScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScreen.swift; sourceTree = "<group>"; };
+		05BF53502CB5573D00A844FD /* ActivityOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				05BF53192CB54B2900A844FD /* aheadChallengeApp.swift */,
-				05BF531B2CB54B2900A844FD /* ContentView.swift */,
-				05BF531D2CB54B2A00A844FD /* Assets.xcassets */,
+				05BF53432CB54B5A00A844FD /* ActivityContainerView.swift */,
+				05BF53452CB54B9100A844FD /* Resources */,
 				05BF531F2CB54B2A00A844FD /* Preview Content */,
+				05BF53522CB5575B00A844FD /* Model */,
 			);
 			path = aheadChallenge;
 			sourceTree = "<group>";
@@ -125,6 +139,27 @@
 				05BF53362CB54B2A00A844FD /* aheadChallengeUITestsLaunchTests.swift */,
 			);
 			path = aheadChallengeUITests;
+			sourceTree = "<group>";
+		};
+		05BF53452CB54B9100A844FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05BF53462CB54BB100A844FD /* activity-response.json */,
+				05BF531D2CB54B2A00A844FD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		05BF53522CB5575B00A844FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05BF53482CB54BCC00A844FD /* ActivityResponse.swift */,
+				05BF534A2CB5566700A844FD /* RecapActivity.swift */,
+				05BF534C2CB5569200A844FD /* MultipleChoiceActivity.swift */,
+				05BF534E2CB556C300A844FD /* ActivityScreen.swift */,
+				05BF53502CB5573D00A844FD /* ActivityOption.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BF53472CB54BB100A844FD /* activity-response.json in Resources */,
 				05BF53212CB54B2A00A844FD /* Preview Assets.xcassets in Resources */,
 				05BF531E2CB54B2A00A844FD /* Assets.xcassets in Resources */,
 			);
@@ -240,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BF53532CB5577E00A844FD /* activity-response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +294,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05BF531C2CB54B2900A844FD /* ContentView.swift in Sources */,
+				05BF53442CB54B5A00A844FD /* ActivityContainerView.swift in Sources */,
+				05BF53512CB5573D00A844FD /* ActivityOption.swift in Sources */,
+				05BF53492CB54BCC00A844FD /* ActivityResponse.swift in Sources */,
+				05BF534F2CB556C300A844FD /* ActivityScreen.swift in Sources */,
+				05BF534B2CB5566700A844FD /* RecapActivity.swift in Sources */,
+				05BF534D2CB5569200A844FD /* MultipleChoiceActivity.swift in Sources */,
 				05BF531A2CB54B2900A844FD /* aheadChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
