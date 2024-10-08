@@ -10,7 +10,7 @@
 		05BF531A2CB54B2900A844FD /* aheadChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53192CB54B2900A844FD /* aheadChallengeApp.swift */; };
 		05BF531E2CB54B2A00A844FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05BF531D2CB54B2A00A844FD /* Assets.xcassets */; };
 		05BF53212CB54B2A00A844FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05BF53202CB54B2A00A844FD /* Preview Assets.xcassets */; };
-		05BF532B2CB54B2A00A844FD /* aheadChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF532A2CB54B2A00A844FD /* aheadChallengeTests.swift */; };
+		05BF532B2CB54B2A00A844FD /* DecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF532A2CB54B2A00A844FD /* DecodeTests.swift */; };
 		05BF53352CB54B2A00A844FD /* aheadChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53342CB54B2A00A844FD /* aheadChallengeUITests.swift */; };
 		05BF53372CB54B2A00A844FD /* aheadChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53362CB54B2A00A844FD /* aheadChallengeUITestsLaunchTests.swift */; };
 		05BF53442CB54B5A00A844FD /* ActivityContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53432CB54B5A00A844FD /* ActivityContainerView.swift */; };
@@ -46,7 +46,7 @@
 		05BF531D2CB54B2A00A844FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05BF53202CB54B2A00A844FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05BF53262CB54B2A00A844FD /* aheadChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aheadChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		05BF532A2CB54B2A00A844FD /* aheadChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aheadChallengeTests.swift; sourceTree = "<group>"; };
+		05BF532A2CB54B2A00A844FD /* DecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeTests.swift; sourceTree = "<group>"; };
 		05BF53302CB54B2A00A844FD /* aheadChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aheadChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BF53342CB54B2A00A844FD /* aheadChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aheadChallengeUITests.swift; sourceTree = "<group>"; };
 		05BF53362CB54B2A00A844FD /* aheadChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aheadChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		05BF53292CB54B2A00A844FD /* aheadChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				05BF532A2CB54B2A00A844FD /* aheadChallengeTests.swift */,
+				05BF532A2CB54B2A00A844FD /* DecodeTests.swift */,
 			);
 			path = aheadChallengeTests;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05BF532B2CB54B2A00A844FD /* aheadChallengeTests.swift in Sources */,
+				05BF532B2CB54B2A00A844FD /* DecodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
