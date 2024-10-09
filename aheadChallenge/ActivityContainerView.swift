@@ -8,9 +8,39 @@
 import SwiftUI
 
 struct ActivityContainerView: View {
+    @Environment(\.dismiss) var dismiss
+    @ObservedObject var viewModel: ActivityScreensViewModel
+    
     var body: some View {
-//        RecapActivityView()
-        MultipleChoiceActivityView()
+        VStack {
+            RoundedRectangle(cornerRadius: 2)
+                .frame(height: 4)
+                .foregroundStyle(Color.accent)
+                
+            HStack {
+                Button("", systemImage: "chevron.backward") {
+                    
+                }
+                .frame(width: 34, height: 34)
+                
+                Spacer()
+                
+                Button("", systemImage: "xmark") {
+                    
+                }
+                .frame(width: 34, height: 34)
+            }
+            .tint(Color("A2A2A2"))
+            
+            screen
+        }
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .padding()
+    }
+    
+    var screen: some View {
+        RecapActivityView()
+        //        MultipleChoiceActivityView()
     }
 }
 
@@ -54,7 +84,7 @@ struct RecapActivityView: View {
             Text("Our brains make us misbehave on ________ – without us fully realizing what we’re actually doing.")
                 .font(.euclid(ofSize: 22))
                 .foregroundStyle(Color("212121").opacity(0.6))
-             
+            
             ForEach(1...3, id: \.self) { option in
                 OptionView(option: ActivityOption(id: "", text: "Option \(option)", emoji: nil))
                     .toggleStyle(ChipToggleStyle())
@@ -88,8 +118,4 @@ struct OptionView: View {
             }
         })
     }
-}
-
-#Preview {
-    ActivityContainerView()
 }

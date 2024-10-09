@@ -33,6 +33,9 @@
 		05BF536A2CB6098900A844FD /* Euclid Circular B SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF535F2CB6098900A844FD /* Euclid Circular B SemiBold.ttf */; };
 		05BF536D2CB61ED900A844FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF536C2CB61ED900A844FD /* Font.swift */; };
 		05BF53702CB6212500A844FD /* ViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF536F2CB6212500A844FD /* ViewStyles.swift */; };
+		05BF53722CB63B1300A844FD /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53712CB63B1300A844FD /* ActivityController.swift */; };
+		05BF53742CB64C5000A844FD /* BeginActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53732CB64C5000A844FD /* BeginActivityView.swift */; };
+		05BF53762CB671E400A844FD /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53752CB671E400A844FD /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		05BF536B2CB60A3100A844FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		05BF536C2CB61ED900A844FD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		05BF536F2CB6212500A844FD /* ViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyles.swift; sourceTree = "<group>"; };
+		05BF53712CB63B1300A844FD /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
+		05BF53732CB64C5000A844FD /* BeginActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginActivityView.swift; sourceTree = "<group>"; };
+		05BF53752CB671E400A844FD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +141,13 @@
 				05BF536B2CB60A3100A844FD /* Info.plist */,
 				05BF53192CB54B2900A844FD /* aheadChallengeApp.swift */,
 				05BF53432CB54B5A00A844FD /* ActivityContainerView.swift */,
+				05BF53712CB63B1300A844FD /* ActivityController.swift */,
 				05BF53522CB5575B00A844FD /* Model */,
 				05BF53452CB54B9100A844FD /* Resources */,
 				05BF531F2CB54B2A00A844FD /* Preview Content */,
 				05BF536E2CB6211000A844FD /* Utils */,
+				05BF53732CB64C5000A844FD /* BeginActivityView.swift */,
+				05BF53752CB671E400A844FD /* CollectionViewController.swift */,
 			);
 			path = aheadChallenge;
 			sourceTree = "<group>";
@@ -232,6 +241,8 @@
 			dependencies = (
 			);
 			name = aheadChallenge;
+			packageProductDependencies = (
+			);
 			productName = aheadChallenge;
 			productReference = 05BF53162CB54B2900A844FD /* aheadChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -304,6 +315,8 @@
 				Base,
 			);
 			mainGroup = 05BF530D2CB54B2900A844FD;
+			packageReferences = (
+			);
 			productRefGroup = 05BF53172CB54B2900A844FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,14 +371,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BF53762CB671E400A844FD /* CollectionViewController.swift in Sources */,
 				05BF53442CB54B5A00A844FD /* ActivityContainerView.swift in Sources */,
 				05BF53512CB5573D00A844FD /* ActivityOption.swift in Sources */,
 				05BF53492CB54BCC00A844FD /* ActivityResponse.swift in Sources */,
 				05BF534F2CB556C300A844FD /* ActivityScreen.swift in Sources */,
 				05BF536D2CB61ED900A844FD /* Font.swift in Sources */,
+				05BF53742CB64C5000A844FD /* BeginActivityView.swift in Sources */,
 				05BF534B2CB5566700A844FD /* RecapActivity.swift in Sources */,
 				05BF534D2CB5569200A844FD /* MultipleChoiceActivity.swift in Sources */,
 				05BF531A2CB54B2900A844FD /* aheadChallengeApp.swift in Sources */,
+				05BF53722CB63B1300A844FD /* ActivityController.swift in Sources */,
 				05BF53702CB6212500A844FD /* ViewStyles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,7 +555,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,7 +586,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

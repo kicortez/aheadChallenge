@@ -12,9 +12,16 @@ enum ActivityScreenType: String, Decodable {
     case recap = "recapModuleScreen"
 }
 
-enum ActivityScreen: Decodable {
+enum ActivityScreen: Decodable, Identifiable {
     case multipleChoice(MultipleChoiceActivity)
     case recap(RecapActivity)
+    
+    var id: String {
+        switch self {
+        case .multipleChoice(let activity): return activity.id
+        case .recap(let activity): return activity.id
+        }
+    }
     
     enum CodingKeys: CodingKey {
         case type

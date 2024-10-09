@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ActivityOption: Decodable {
+struct ActivityOption: Decodable, Hashable {
     let id: String
     let text: String
     let emoji: String?

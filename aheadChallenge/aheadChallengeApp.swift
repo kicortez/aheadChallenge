@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct aheadChallengeApp: App {
+    @StateObject var controller = ActivityController()
+    
     var body: some Scene {
         WindowGroup {
-            ActivityContainerView()
+            BeginActivityView(controller: controller)
+                .task {
+                    controller.getActivity()
+                }
         }
     }
 }
