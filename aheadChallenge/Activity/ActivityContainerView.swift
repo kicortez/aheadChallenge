@@ -39,12 +39,12 @@ struct ActivityContainerView: View {
     func ActivityScreen(for screen: ActivityScreen) -> some View {
         switch screen {
         case .multipleChoice(let activity):
-            MultipleChoiceActivityView()
+            MultipleChoiceActivityView(actitvity: activity)
                 .onActivityDone {
                     nextScreen()
                 }
         case .recap(let activity):
-            RecapActivityView()
+            RecapActivityView(activity: activity)
                 .onActivityDone {
                     nextScreen()
                 }

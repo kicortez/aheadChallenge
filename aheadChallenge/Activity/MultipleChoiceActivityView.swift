@@ -8,34 +8,43 @@
 import SwiftUI
 
 struct MultipleChoiceActivityView: View {
+    let actitvity: MultipleChoiceActivity
     var activityDone: (() -> Void)?
     
     var body: some View {
         VStack {
             Spacer()
             
-            Text("Were you able to use any of them when angry?")
+            Text(actitvity.question)
                 .font(.euclid(ofSize: 22))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
             
-            Text("Select all that apply")
-                .font(.euclid(ofSize: 16))
+            if actitvity.multipleChoicesAllowed {
+                Text("Select all that apply")
+                    .font(.euclid(ofSize: 16))
+            }
             
             Spacer()
             
-            ForEach(1...3, id: \.self) { option in
-                OptionView(option: ActivityOption(id: "", text: "Option \(option)", emoji: nil))
+            ForEach(actitvity.choices, id: \.self) { option in
+                OptionView(option: option)
                     .toggleStyle(BorderToggleStyle())
+                    .onTapGesture {
+                        activityDone?()
+                    }
             }
             
-            Button {
-                activityDone?()
-            } label: {
-                Text("Check")
+            if actitvity.multipleChoicesAllowed {
+                Button {
+                    activityDone?()
+                } label: {
+                    Text("Continue")
+                }
+                .buttonStyle(FilledButtonStyle())
             }
-            .buttonStyle(FilledButtonStyle())
         }
+        .padding(.horizontal)
     }
     
     func onActivityDone(_ perform: @escaping () -> Void) -> some View {

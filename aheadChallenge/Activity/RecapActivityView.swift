@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecapActivityView: View {
+    let activity: RecapActivity
     var activityDone: (() -> Void)?
     
     var body: some View {
@@ -21,13 +22,13 @@ struct RecapActivityView: View {
                     .font(.euclid(ofSize: 18, weight: .medium))
                     .padding(.bottom, 30)
                 
-                Text("Our brains make us misbehave on ________ – without us fully realizing what we’re actually doing.")
+                Text(activity.body)
                     .font(.euclid(ofSize: 22))
                     .foregroundStyle(Color("212121").opacity(0.6))
                     .padding(.bottom, 32)
                 
-                ForEach(1...3, id: \.self) { option in
-                    OptionView(option: ActivityOption(id: "", text: "Option \(option)", emoji: nil))
+                ForEach(activity.answers, id: \.self) { option in
+                    OptionView(option: option)
                         .toggleStyle(ChipToggleStyle())
                 }
                 
