@@ -21,6 +21,18 @@
 		05BF534F2CB556C300A844FD /* ActivityScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF534E2CB556C300A844FD /* ActivityScreen.swift */; };
 		05BF53512CB5573D00A844FD /* ActivityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53502CB5573D00A844FD /* ActivityOption.swift */; };
 		05BF53532CB5577E00A844FD /* activity-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 05BF53462CB54BB100A844FD /* activity-response.json */; };
+		05BF53612CB6098900A844FD /* Euclid Circular B Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF53562CB6098900A844FD /* Euclid Circular B Bold Italic.ttf */; };
+		05BF53622CB6098900A844FD /* Euclid Circular B Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF53572CB6098900A844FD /* Euclid Circular B Bold.ttf */; };
+		05BF53632CB6098900A844FD /* Euclid Circular B Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF53582CB6098900A844FD /* Euclid Circular B Italic.ttf */; };
+		05BF53642CB6098900A844FD /* Euclid Circular B Light Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF53592CB6098900A844FD /* Euclid Circular B Light Italic.ttf */; };
+		05BF53652CB6098900A844FD /* Euclid Circular B Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF535A2CB6098900A844FD /* Euclid Circular B Light.ttf */; };
+		05BF53662CB6098900A844FD /* Euclid Circular B Medium Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF535B2CB6098900A844FD /* Euclid Circular B Medium Italic.ttf */; };
+		05BF53672CB6098900A844FD /* Euclid Circular B Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF535C2CB6098900A844FD /* Euclid Circular B Medium.ttf */; };
+		05BF53682CB6098900A844FD /* Euclid Circular B Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF535D2CB6098900A844FD /* Euclid Circular B Regular.ttf */; };
+		05BF53692CB6098900A844FD /* Euclid Circular B SemiBold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF535E2CB6098900A844FD /* Euclid Circular B SemiBold Italic.ttf */; };
+		05BF536A2CB6098900A844FD /* Euclid Circular B SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BF535F2CB6098900A844FD /* Euclid Circular B SemiBold.ttf */; };
+		05BF536D2CB61ED900A844FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF536C2CB61ED900A844FD /* Font.swift */; };
+		05BF53702CB6212500A844FD /* ViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF536F2CB6212500A844FD /* ViewStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +69,19 @@
 		05BF534C2CB5569200A844FD /* MultipleChoiceActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceActivity.swift; sourceTree = "<group>"; };
 		05BF534E2CB556C300A844FD /* ActivityScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScreen.swift; sourceTree = "<group>"; };
 		05BF53502CB5573D00A844FD /* ActivityOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityOption.swift; sourceTree = "<group>"; };
+		05BF53562CB6098900A844FD /* Euclid Circular B Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B Bold Italic.ttf"; sourceTree = "<group>"; };
+		05BF53572CB6098900A844FD /* Euclid Circular B Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B Bold.ttf"; sourceTree = "<group>"; };
+		05BF53582CB6098900A844FD /* Euclid Circular B Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B Italic.ttf"; sourceTree = "<group>"; };
+		05BF53592CB6098900A844FD /* Euclid Circular B Light Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B Light Italic.ttf"; sourceTree = "<group>"; };
+		05BF535A2CB6098900A844FD /* Euclid Circular B Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B Light.ttf"; sourceTree = "<group>"; };
+		05BF535B2CB6098900A844FD /* Euclid Circular B Medium Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B Medium Italic.ttf"; sourceTree = "<group>"; };
+		05BF535C2CB6098900A844FD /* Euclid Circular B Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B Medium.ttf"; sourceTree = "<group>"; };
+		05BF535D2CB6098900A844FD /* Euclid Circular B Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B Regular.ttf"; sourceTree = "<group>"; };
+		05BF535E2CB6098900A844FD /* Euclid Circular B SemiBold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B SemiBold Italic.ttf"; sourceTree = "<group>"; };
+		05BF535F2CB6098900A844FD /* Euclid Circular B SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Euclid Circular B SemiBold.ttf"; sourceTree = "<group>"; };
+		05BF536B2CB60A3100A844FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		05BF536C2CB61ED900A844FD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		05BF536F2CB6212500A844FD /* ViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +132,13 @@
 		05BF53182CB54B2900A844FD /* aheadChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				05BF536B2CB60A3100A844FD /* Info.plist */,
 				05BF53192CB54B2900A844FD /* aheadChallengeApp.swift */,
 				05BF53432CB54B5A00A844FD /* ActivityContainerView.swift */,
+				05BF53522CB5575B00A844FD /* Model */,
 				05BF53452CB54B9100A844FD /* Resources */,
 				05BF531F2CB54B2A00A844FD /* Preview Content */,
-				05BF53522CB5575B00A844FD /* Model */,
+				05BF536E2CB6211000A844FD /* Utils */,
 			);
 			path = aheadChallenge;
 			sourceTree = "<group>";
@@ -146,6 +173,7 @@
 			children = (
 				05BF53462CB54BB100A844FD /* activity-response.json */,
 				05BF531D2CB54B2A00A844FD /* Assets.xcassets */,
+				05BF53602CB6098900A844FD /* Font */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -160,6 +188,32 @@
 				05BF53502CB5573D00A844FD /* ActivityOption.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		05BF53602CB6098900A844FD /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				05BF53562CB6098900A844FD /* Euclid Circular B Bold Italic.ttf */,
+				05BF53572CB6098900A844FD /* Euclid Circular B Bold.ttf */,
+				05BF53582CB6098900A844FD /* Euclid Circular B Italic.ttf */,
+				05BF53592CB6098900A844FD /* Euclid Circular B Light Italic.ttf */,
+				05BF535A2CB6098900A844FD /* Euclid Circular B Light.ttf */,
+				05BF535B2CB6098900A844FD /* Euclid Circular B Medium Italic.ttf */,
+				05BF535C2CB6098900A844FD /* Euclid Circular B Medium.ttf */,
+				05BF535D2CB6098900A844FD /* Euclid Circular B Regular.ttf */,
+				05BF535E2CB6098900A844FD /* Euclid Circular B SemiBold Italic.ttf */,
+				05BF535F2CB6098900A844FD /* Euclid Circular B SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		05BF536E2CB6211000A844FD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				05BF536C2CB61ED900A844FD /* Font.swift */,
+				05BF536F2CB6212500A844FD /* ViewStyles.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +320,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BF53672CB6098900A844FD /* Euclid Circular B Medium.ttf in Resources */,
+				05BF53662CB6098900A844FD /* Euclid Circular B Medium Italic.ttf in Resources */,
 				05BF53472CB54BB100A844FD /* activity-response.json in Resources */,
+				05BF53642CB6098900A844FD /* Euclid Circular B Light Italic.ttf in Resources */,
+				05BF53632CB6098900A844FD /* Euclid Circular B Italic.ttf in Resources */,
+				05BF536A2CB6098900A844FD /* Euclid Circular B SemiBold.ttf in Resources */,
 				05BF53212CB54B2A00A844FD /* Preview Assets.xcassets in Resources */,
+				05BF53652CB6098900A844FD /* Euclid Circular B Light.ttf in Resources */,
 				05BF531E2CB54B2A00A844FD /* Assets.xcassets in Resources */,
+				05BF53682CB6098900A844FD /* Euclid Circular B Regular.ttf in Resources */,
+				05BF53622CB6098900A844FD /* Euclid Circular B Bold.ttf in Resources */,
+				05BF53612CB6098900A844FD /* Euclid Circular B Bold Italic.ttf in Resources */,
+				05BF53692CB6098900A844FD /* Euclid Circular B SemiBold Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,9 +362,11 @@
 				05BF53512CB5573D00A844FD /* ActivityOption.swift in Sources */,
 				05BF53492CB54BCC00A844FD /* ActivityResponse.swift in Sources */,
 				05BF534F2CB556C300A844FD /* ActivityScreen.swift in Sources */,
+				05BF536D2CB61ED900A844FD /* Font.swift in Sources */,
 				05BF534B2CB5566700A844FD /* RecapActivity.swift in Sources */,
 				05BF534D2CB5569200A844FD /* MultipleChoiceActivity.swift in Sources */,
 				05BF531A2CB54B2900A844FD /* aheadChallengeApp.swift in Sources */,
+				05BF53702CB6212500A844FD /* ViewStyles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,11 +533,13 @@
 				DEVELOPMENT_TEAM = 85GFBAHEM6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = aheadChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,11 +564,13 @@
 				DEVELOPMENT_TEAM = 85GFBAHEM6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = aheadChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
