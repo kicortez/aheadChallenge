@@ -20,7 +20,6 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
     
     private lazy var datasource = makeDatasource()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

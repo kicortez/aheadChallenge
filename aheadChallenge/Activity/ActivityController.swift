@@ -37,10 +37,26 @@ class ActivityViewModel: ObservableObject {
     }
 }
 
-class ActivityScreensViewModel: ObservableObject {
+class ActivityScreensViewModel: ObservableObject, ScreenNavigatable {
     let screens: [ActivityScreen]
+    @Published var currentPage = 0
     
     init(screens: [ActivityScreen]) {
         self.screens = screens
     }
+    
+    var currentScreen: ActivityScreen? {
+        guard currentPage < screens.count else { return nil }
+        return screens[currentPage]
+    }
+    
+    func nextScreen() {
+        currentPage += 1
+    }
+    
+    func previousScreen() {
+        currentPage -= 1
+    }
+    
+    func endActivity() {}
 }
