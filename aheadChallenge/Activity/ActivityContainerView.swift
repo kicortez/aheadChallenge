@@ -12,68 +12,42 @@ struct ActivityContainerView: View {
     @ObservedObject var viewModel: ActivityScreensViewModel
     
     var body: some View {
-        VStack(spacing: 8) {
-            VStack(spacing: 10) {
-                RoundedRectangle(cornerRadius: 2)
-                    .frame(height: 4)
-                    .foregroundStyle(Color.accent)
-                
-                HStack {
-                    Button("", systemImage: "chevron.backward") {
-                        previousScreen()
+        Group {
+            if let screen = viewModel.currentScreen {
+                VStack(spacing: 8) {
+                    VStack(spacing: 10) {
+                        ActivityProgressView()
+                        
+                        ActivityHeaderNavigationView(navigator: self)
                     }
-                    .frame(width: 34, height: 34)
+                    .padding(.horizontal)
+                    
+                    ActivityScreen(for: screen)
                     
                     Spacer()
-                    
-                    Button("", systemImage: "xmark") {
-                        endActivity()
-                    }
-                    .frame(width: 34, height: 34)
                 }
-                .tint(Color("A2A2A2"))
+                .frame(minWidth: 0, maxWidth: .infinity)
             }
-            .padding(.horizontal)
-            
-            screen
-            
-            Spacer()
+            else {
+                ActivityFinishedView(navigator: self)
+            }
         }
-        .frame(minWidth: 0, maxWidth: .infinity)
+        .environmentObject(viewModel)
     }
     
     @ViewBuilder
-    var screen: some View {
-        if let screen = viewModel.currentScreen {
-            switch screen {
-            case .multipleChoice(let multipleChoiceActivity):
-                MultipleChoiceActivityView()
-                    .onActivityDone {
-                        nextScreen()
-                    }
-            case .recap(let recapActivity):
-                RecapActivityView()
-                    .onActivityDone {
-                        nextScreen()
-                    }
-            }
-        }
-        else {
-            VStack(spacing: 32) {
-                Text("Great work!")
-                    .font(.euclid(ofSize: 22, weight: .bold))
-                
-                Text("You have completed this activity.")
-                    .font(.euclid(ofSize: 16))
-                
-                Button {
-                    endActivity()
-                } label: {
-                    Text("Finish")
+    func ActivityScreen(for screen: ActivityScreen) -> some View {
+        switch screen {
+        case .multipleChoice(let activity):
+            MultipleChoiceActivityView()
+                .onActivityDone {
+                    nextScreen()
                 }
-                .buttonStyle(FilledButtonStyle())
-            }
-            .padding()
+        case .recap(let activity):
+            RecapActivityView()
+                .onActivityDone {
+                    nextScreen()
+                }
         }
     }
 }
@@ -90,27 +64,13 @@ extension ActivityContainerView: ScreenNavigatable {
     func endActivity() {
         dismiss()
     }
-}
-
-struct OptionView: View {
-    let option: ActivityOption
     
-    var body: some View {
-        Toggle(isOn: .constant(false), label: {
-            HStack {
-                if let emoji = option.emoji {
-                    Text(emoji)
-                        .font(.euclid(ofSize: 24))
-                }
-                
-                Text(option.text)
-            }
-        })
-    }
+    var canGoBack: Bool { viewModel.canGoBack }
 }
 
 protocol ScreenNavigatable {
     func nextScreen()
     func previousScreen()
     func endActivity()
+    var canGoBack: Bool { get }
 }

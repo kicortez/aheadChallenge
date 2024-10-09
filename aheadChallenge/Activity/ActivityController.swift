@@ -46,7 +46,7 @@ class ActivityScreensViewModel: ObservableObject, ScreenNavigatable {
     }
     
     var currentScreen: ActivityScreen? {
-        guard currentPage < screens.count else { return nil }
+        guard currentPage < screens.count, currentPage >= 0 else { return nil }
         return screens[currentPage]
     }
     
@@ -57,6 +57,8 @@ class ActivityScreensViewModel: ObservableObject, ScreenNavigatable {
     func previousScreen() {
         currentPage -= 1
     }
+    
+    var canGoBack: Bool { currentPage > 0 }
     
     func endActivity() {}
 }
