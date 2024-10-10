@@ -43,6 +43,8 @@
 		05BF53852CB6AA6300A844FD /* ActivityHeaderNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53842CB6AA6300A844FD /* ActivityHeaderNavigationView.swift */; };
 		05BF53872CB6AB4C00A844FD /* ActivityProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53862CB6AB4C00A844FD /* ActivityProgressView.swift */; };
 		05BF53892CB6AB6700A844FD /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53882CB6AB6700A844FD /* OptionView.swift */; };
+		05BF538B2CB7F4B000A844FD /* MultipleChoiceActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF538A2CB7F4B000A844FD /* MultipleChoiceActivityController.swift */; };
+		05BF538D2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF538C2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		05BF53842CB6AA6300A844FD /* ActivityHeaderNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHeaderNavigationView.swift; sourceTree = "<group>"; };
 		05BF53862CB6AB4C00A844FD /* ActivityProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityProgressView.swift; sourceTree = "<group>"; };
 		05BF53882CB6AB6700A844FD /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
+		05BF538A2CB7F4B000A844FD /* MultipleChoiceActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceActivityController.swift; sourceTree = "<group>"; };
+		05BF538C2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceActivityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,8 @@
 				05BF53822CB6AA0900A844FD /* ActivityFinishedView.swift */,
 				05BF53842CB6AA6300A844FD /* ActivityHeaderNavigationView.swift */,
 				05BF53862CB6AB4C00A844FD /* ActivityProgressView.swift */,
+				05BF538A2CB7F4B000A844FD /* MultipleChoiceActivityController.swift */,
+				05BF538C2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 				05BF53512CB5573D00A844FD /* ActivityOption.swift in Sources */,
 				05BF53852CB6AA6300A844FD /* ActivityHeaderNavigationView.swift in Sources */,
 				05BF537B2CB69B0600A844FD /* AnswerResultView.swift in Sources */,
+				05BF538B2CB7F4B000A844FD /* MultipleChoiceActivityController.swift in Sources */,
 				05BF53492CB54BCC00A844FD /* ActivityResponse.swift in Sources */,
 				05BF534F2CB556C300A844FD /* ActivityScreen.swift in Sources */,
 				05BF537F2CB6A48C00A844FD /* MultipleChoiceActivityView.swift in Sources */,
@@ -422,6 +429,7 @@
 				05BF53742CB64C5000A844FD /* BeginActivityView.swift in Sources */,
 				05BF534B2CB5566700A844FD /* RecapActivity.swift in Sources */,
 				05BF537D2CB6A1A000A844FD /* RecapActivityView.swift in Sources */,
+				05BF538D2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift in Sources */,
 				05BF534D2CB5569200A844FD /* MultipleChoiceActivity.swift in Sources */,
 				05BF53892CB6AB6700A844FD /* OptionView.swift in Sources */,
 				05BF531A2CB54B2900A844FD /* aheadChallengeApp.swift in Sources */,

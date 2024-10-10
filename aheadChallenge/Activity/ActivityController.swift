@@ -50,6 +50,8 @@ class ActivityScreensViewModel: ObservableObject, ScreenNavigatable {
         return screens[currentPage]
     }
     
+    var isFinished: Bool { currentPage >= screens.count }
+    
     func nextScreen() {
         currentPage += 1
     }

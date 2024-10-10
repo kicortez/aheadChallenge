@@ -7,19 +7,27 @@
 
 import SwiftUI
 
+class OptionViewModel: ObservableObject {
+    private let option: ActivityOption
+    
+    @Published var isEnabled = false
+    
+    init(option: ActivityOption, isEnabled: Bool) {
+        self.option = option
+        self.isEnabled = isEnabled
+    }
+    
+    var id: String { option.id }
+    var text: String { (option.emoji ?? "") + " " + option.text }
+}
+
 struct OptionView: View {
-    let option: ActivityOption
+    @ObservedObject var viewModel: OptionViewModel
     
     var body: some View {
-        Toggle(isOn: .constant(false), label: {
-            HStack {
-                if let emoji = option.emoji {
-                    Text(emoji)
-                        .font(.euclid(ofSize: 24))
-                }
-                
-                Text(option.text)
-            }
+        Toggle(isOn: $viewModel.isEnabled, label: {
+            Text(viewModel.text)
         })
+        .contentShape(Rectangle())
     }
 }

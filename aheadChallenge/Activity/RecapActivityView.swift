@@ -28,7 +28,7 @@ struct RecapActivityView: View {
                     .padding(.bottom, 32)
                 
                 ForEach(activity.answers, id: \.self) { option in
-                    OptionView(option: option)
+                    OptionView(viewModel: OptionViewModel(option: option, isEnabled: false))
                         .toggleStyle(ChipToggleStyle())
                 }
                 

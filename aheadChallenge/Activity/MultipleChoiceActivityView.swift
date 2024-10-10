@@ -8,40 +8,50 @@
 import SwiftUI
 
 struct MultipleChoiceActivityView: View {
-    let actitvity: MultipleChoiceActivity
+    @StateObject private var controller: MultipleChoiceActivityController
+    private var viewModel: MultipleChoiceActivityViewModel
     var activityDone: (() -> Void)?
+    
+    init(activity: MultipleChoiceActivity) {
+        _controller = StateObject(wrappedValue: MultipleChoiceActivityController(activity: activity))
+        viewModel = MultipleChoiceActivityViewModel(actitvity: activity)
+    }
     
     var body: some View {
         VStack {
             Spacer()
             
-            Text(actitvity.question)
+            Text(viewModel.question)
                 .font(.euclid(ofSize: 22))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
             
-            if actitvity.multipleChoicesAllowed {
+            if viewModel.isMultipleChoiceAllowed {
                 Text("Select all that apply")
                     .font(.euclid(ofSize: 16))
             }
             
             Spacer()
             
-            ForEach(actitvity.choices, id: \.self) { option in
-                OptionView(option: option)
+            ForEach(controller.choices, id: \.id) { option in
+                OptionView(viewModel: option)
                     .toggleStyle(BorderToggleStyle())
                     .onTapGesture {
-                        activityDone?()
+                        controller.select(option: option)
+                        if !viewModel.isMultipleChoiceAllowed {
+                            activityDone?()
+                        }
                     }
             }
             
-            if actitvity.multipleChoicesAllowed {
+            if viewModel.isMultipleChoiceAllowed {
                 Button {
                     activityDone?()
                 } label: {
                     Text("Continue")
                 }
                 .buttonStyle(FilledButtonStyle())
+                .disabled(controller.needsSelection)
             }
         }
         .padding(.horizontal)

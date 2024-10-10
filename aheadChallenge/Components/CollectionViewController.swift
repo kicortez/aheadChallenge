@@ -41,7 +41,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
             
             let config = UIHostingConfiguration {
-                OptionView(option: ActivityOption(id: "", text: itemIdentifier, emoji: nil)).toggleStyle(ChipToggleStyle())
+                OptionView(viewModel: OptionViewModel(option: ActivityOption(id: "", text: itemIdentifier, emoji: nil), isEnabled: false)).toggleStyle(ChipToggleStyle())
             }
             
             let label = config.makeContentView()

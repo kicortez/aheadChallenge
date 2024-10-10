@@ -13,7 +13,7 @@ struct ActivityContainerView: View {
     
     var body: some View {
         Group {
-            if let screen = viewModel.currentScreen {
+            if !viewModel.screens.isEmpty && !viewModel.isFinished {
                 VStack(spacing: 8) {
                     VStack(spacing: 10) {
                         ActivityProgressView()
@@ -22,7 +22,12 @@ struct ActivityContainerView: View {
                     }
                     .padding(.horizontal)
                     
-                    ActivityScreen(for: screen)
+                    TabView(selection: $viewModel.currentPage ) {
+                        ForEach(Array(viewModel.screens.enumerated()), id: \.offset) { index, screen in
+                            ActivityScreen(for: screen)
+                                .tag(index)
+                        }
+                    }
                     
                     Spacer()
                 }
@@ -39,7 +44,7 @@ struct ActivityContainerView: View {
     func ActivityScreen(for screen: ActivityScreen) -> some View {
         switch screen {
         case .multipleChoice(let activity):
-            MultipleChoiceActivityView(actitvity: activity)
+            MultipleChoiceActivityView(activity: activity)
                 .onActivityDone {
                     nextScreen()
                 }
