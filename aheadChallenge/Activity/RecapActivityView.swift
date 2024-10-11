@@ -27,10 +27,9 @@ struct RecapActivityView: View {
                     .foregroundStyle(Color("212121").opacity(0.6))
                     .padding(.bottom, 32)
                 
-                ForEach(activity.answers, id: \.self) { option in
-                    OptionView(viewModel: OptionViewModel(option: option, isEnabled: false))
-                        .toggleStyle(ChipToggleStyle())
-                }
+                let data = activity.answers.map { OptionViewModel(option: $0, isEnabled: false) }
+                
+                CollectionView(cell: OptionView.self, data: data)
                 
                 Spacer()
                 

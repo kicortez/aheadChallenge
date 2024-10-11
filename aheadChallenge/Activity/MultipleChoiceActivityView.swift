@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct MultipleChoiceActivityView: View {
-    @StateObject private var controller: MultipleChoiceActivityController
+    @ObservedObject private var controller: MultipleChoiceActivityController
     private var viewModel: MultipleChoiceActivityViewModel
     var activityDone: (() -> Void)?
     
     init(activity: MultipleChoiceActivity) {
-        _controller = StateObject(wrappedValue: MultipleChoiceActivityController(activity: activity))
+        _controller = ObservedObject(wrappedValue: MultipleChoiceActivityController(activity: activity))
         viewModel = MultipleChoiceActivityViewModel(actitvity: activity)
     }
     
