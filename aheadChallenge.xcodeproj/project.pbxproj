@@ -35,7 +35,7 @@
 		05BF53702CB6212500A844FD /* ViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF536F2CB6212500A844FD /* ViewStyles.swift */; };
 		05BF53722CB63B1300A844FD /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53712CB63B1300A844FD /* ActivityController.swift */; };
 		05BF53742CB64C5000A844FD /* BeginActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53732CB64C5000A844FD /* BeginActivityView.swift */; };
-		05BF53762CB671E400A844FD /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53752CB671E400A844FD /* CollectionViewController.swift */; };
+		05BF53762CB671E400A844FD /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53752CB671E400A844FD /* CollectionView.swift */; };
 		05BF537B2CB69B0600A844FD /* AnswerResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF537A2CB69B0600A844FD /* AnswerResultView.swift */; };
 		05BF537D2CB6A1A000A844FD /* RecapActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF537C2CB6A1A000A844FD /* RecapActivityView.swift */; };
 		05BF537F2CB6A48C00A844FD /* MultipleChoiceActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF537E2CB6A48C00A844FD /* MultipleChoiceActivityView.swift */; };
@@ -45,6 +45,7 @@
 		05BF53892CB6AB6700A844FD /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF53882CB6AB6700A844FD /* OptionView.swift */; };
 		05BF538B2CB7F4B000A844FD /* MultipleChoiceActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF538A2CB7F4B000A844FD /* MultipleChoiceActivityController.swift */; };
 		05BF538D2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF538C2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift */; };
+		05BF538F2CB8F5A800A844FD /* RecapActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF538E2CB8F5A800A844FD /* RecapActivityController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +97,7 @@
 		05BF536F2CB6212500A844FD /* ViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyles.swift; sourceTree = "<group>"; };
 		05BF53712CB63B1300A844FD /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		05BF53732CB64C5000A844FD /* BeginActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginActivityView.swift; sourceTree = "<group>"; };
-		05BF53752CB671E400A844FD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		05BF53752CB671E400A844FD /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		05BF537A2CB69B0600A844FD /* AnswerResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerResultView.swift; sourceTree = "<group>"; };
 		05BF537C2CB6A1A000A844FD /* RecapActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapActivityView.swift; sourceTree = "<group>"; };
 		05BF537E2CB6A48C00A844FD /* MultipleChoiceActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceActivityView.swift; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 		05BF53882CB6AB6700A844FD /* OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
 		05BF538A2CB7F4B000A844FD /* MultipleChoiceActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceActivityController.swift; sourceTree = "<group>"; };
 		05BF538C2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceActivityViewModel.swift; sourceTree = "<group>"; };
+		05BF538E2CB8F5A800A844FD /* RecapActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapActivityController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,14 +248,12 @@
 			children = (
 				05BF53432CB54B5A00A844FD /* ActivityContainerView.swift */,
 				05BF53732CB64C5000A844FD /* BeginActivityView.swift */,
-				05BF537C2CB6A1A000A844FD /* RecapActivityView.swift */,
-				05BF537E2CB6A48C00A844FD /* MultipleChoiceActivityView.swift */,
 				05BF53712CB63B1300A844FD /* ActivityController.swift */,
 				05BF53822CB6AA0900A844FD /* ActivityFinishedView.swift */,
 				05BF53842CB6AA6300A844FD /* ActivityHeaderNavigationView.swift */,
 				05BF53862CB6AB4C00A844FD /* ActivityProgressView.swift */,
-				05BF538A2CB7F4B000A844FD /* MultipleChoiceActivityController.swift */,
-				05BF538C2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift */,
+				05BF53912CB8F5C700A844FD /* Recap */,
+				05BF53902CB8F5B700A844FD /* MultipleChoice */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -261,11 +261,30 @@
 		05BF53812CB6A54E00A844FD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				05BF53752CB671E400A844FD /* CollectionViewController.swift */,
+				05BF53752CB671E400A844FD /* CollectionView.swift */,
 				05BF537A2CB69B0600A844FD /* AnswerResultView.swift */,
 				05BF53882CB6AB6700A844FD /* OptionView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		05BF53902CB8F5B700A844FD /* MultipleChoice */ = {
+			isa = PBXGroup;
+			children = (
+				05BF537E2CB6A48C00A844FD /* MultipleChoiceActivityView.swift */,
+				05BF538A2CB7F4B000A844FD /* MultipleChoiceActivityController.swift */,
+				05BF538C2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift */,
+			);
+			path = MultipleChoice;
+			sourceTree = "<group>";
+		};
+		05BF53912CB8F5C700A844FD /* Recap */ = {
+			isa = PBXGroup;
+			children = (
+				05BF537C2CB6A1A000A844FD /* RecapActivityView.swift */,
+				05BF538E2CB8F5A800A844FD /* RecapActivityController.swift */,
+			);
+			path = Recap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,7 +433,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05BF53762CB671E400A844FD /* CollectionViewController.swift in Sources */,
+				05BF538F2CB8F5A800A844FD /* RecapActivityController.swift in Sources */,
+				05BF53762CB671E400A844FD /* CollectionView.swift in Sources */,
 				05BF53442CB54B5A00A844FD /* ActivityContainerView.swift in Sources */,
 				05BF53512CB5573D00A844FD /* ActivityOption.swift in Sources */,
 				05BF53852CB6AA6300A844FD /* ActivityHeaderNavigationView.swift in Sources */,

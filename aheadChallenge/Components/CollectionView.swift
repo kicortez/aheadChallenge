@@ -8,75 +8,83 @@
 import UIKit
 import SwiftUI
 
-protocol DataConfigurable {
+protocol ViewSource {
     associatedtype Content: Hashable
     associatedtype V: View
     
-    static func configure(with data: Content) -> V
+    func view(for content: Content) -> V
 }
 
-struct CollectionView<Cell: View & DataConfigurable>: UIViewRepresentable {
-    let cell: Cell.Type
-    let data: [Cell.Content]
+struct CollectionView<Datasource: ViewSource>: UIViewRepresentable {
+    let source: Datasource
+    @Binding var items: [Datasource.Content]
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        
+        context.coordinator.applySnapshot(items: items)
     }
     
     func makeUIView(context: Context) -> some UIView {
         let coordinator = context.coordinator
-        coordinator.applySnapshot()
+        coordinator.applySnapshot(items: items)
         return coordinator.collectionView
     }
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(cell: cell.self, items: data)
+        return Coordinator(source: source)
+    }
+    
+    final internal class Cell: UICollectionViewCell {
+        let contentTag = 10923
+        
+        func configure(with view: UIView) {
+            viewWithTag(contentTag)?.removeFromSuperview()
+            
+            view.tag = contentTag
+            
+            view.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(view)
+            
+            leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        }
     }
     
     @MainActor
     final internal class Coordinator: NSObject {
-        let cell: Cell.Type
-        let items: [Cell.Content]
+        let source: Datasource
         
-        init(cell: Cell.Type, items: [Cell.Content]) {
-            self.items = items
-            self.cell = cell
+        init(source: Datasource) {
+            self.source = source
         }
         
         lazy var collectionView: UICollectionView = {
             let layout = createLeftAlignedLayout()
             let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
             collectionView.translatesAutoresizingMaskIntoConstraints = false
-            collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+            collectionView.register(Cell.self, forCellWithReuseIdentifier: "cell")
             return collectionView
         }()
         
         private lazy var datasource = makeDatasource()
         
-        private func makeDatasource() -> UICollectionViewDiffableDataSource<Int, Cell.Content> {
+        private func makeDatasource() -> UICollectionViewDiffableDataSource<Int, Datasource.Content> {
             return UICollectionViewDiffableDataSource(collectionView: collectionView) { [weak self] collectionView, indexPath, itemIdentifier in
-                let container = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+                let container = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Cell
                 
                 let config = UIHostingConfiguration {
-                    self?.cell.configure(with: itemIdentifier)
+                    self?.source.view(for: itemIdentifier).fixedSize()
                 }
                 
-                let label = config.makeContentView()
-                label.translatesAutoresizingMaskIntoConstraints = false
-                
-                container.addSubview(label)
-                
-                container.leadingAnchor.constraint(equalTo: label.leadingAnchor).isActive = true
-                container.topAnchor.constraint(equalTo: label.topAnchor).isActive = true
-                container.trailingAnchor.constraint(equalTo: label.trailingAnchor).isActive = true
-                container.bottomAnchor.constraint(equalTo: label.bottomAnchor).isActive = true
-                
+                container.configure(with: config.makeContentView())
+
                 return container
             }
         }
         
-        func applySnapshot() {
-            var snapshot = NSDiffableDataSourceSnapshot<Int, Cell.Content>()
+        func applySnapshot(items: [Datasource.Content]) {
+            var snapshot = NSDiffableDataSourceSnapshot<Int, Datasource.Content>()
             snapshot.appendSections([1])
             snapshot.appendItems(items)
             

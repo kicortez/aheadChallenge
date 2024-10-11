@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AnswerResultView: View {
-    let isCorrect = true
+    let isCorrect: Bool
+    var continueTapped: (() -> Void)?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -20,7 +21,7 @@ struct AnswerResultView: View {
                 Text(isCorrect ? "You're correct" : "Try again")
                 
                 Button {
-                    
+                    continueTapped?()
                 } label: {
                     Text("Continue")
                 }
@@ -31,8 +32,10 @@ struct AnswerResultView: View {
         .frame(minWidth: 0, maxWidth: .infinity)
         .background(Color.white)
     }
-}
-
-#Preview {
-    AnswerResultView()
+    
+    func onContinue(_ perform: @escaping () -> Void) -> AnswerResultView {
+        var view = self
+        view.continueTapped = perform
+        return view
+    }
 }
