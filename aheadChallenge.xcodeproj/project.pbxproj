@@ -108,6 +108,7 @@
 		05BF538A2CB7F4B000A844FD /* MultipleChoiceActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceActivityController.swift; sourceTree = "<group>"; };
 		05BF538C2CB7F4C300A844FD /* MultipleChoiceActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceActivityViewModel.swift; sourceTree = "<group>"; };
 		05BF538E2CB8F5A800A844FD /* RecapActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapActivityController.swift; sourceTree = "<group>"; };
+		05BF53922CB9367300A844FD /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +139,7 @@
 		05BF530D2CB54B2900A844FD = {
 			isa = PBXGroup;
 			children = (
+				05BF53922CB9367300A844FD /* Notes */,
 				05BF53182CB54B2900A844FD /* aheadChallenge */,
 				05BF53292CB54B2A00A844FD /* aheadChallengeTests */,
 				05BF53332CB54B2A00A844FD /* aheadChallengeUITests */,

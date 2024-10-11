@@ -1,0 +1,14 @@
+Run:
+- No special setup needed. Clone and run the project
+
+Notes:
+- I'm fairly new to SwiftUI, so I wanted to work with that
+- No networking provided. The relevant controller should be good enough for a quick update for network needs
+- I used controllers/view models to manage states and actions
+
+Challenges/improvements:
+- Drag and drop UI for recap. I had some initial idea for setting up the droppable area but no time to continue
+- Wasn't able to implement and polish transitions and animations. The confetti for correct recap is also missing
+- I added the test for decoding the model, but wasn't able to do so for controllers/models
+
+I had fun :)
